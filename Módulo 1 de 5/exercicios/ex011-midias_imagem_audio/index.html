@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mídias em HTML5</title>
+  </head>
+  <body>
+    <h1>Imagens dinâmica</h1>
+    <p>
+      Tente abrir esse site em várias dispositivos diferentes ou simplesmente
+      aumente e diminua o tamanho do seu navegador
+    </p>
+
+    <!-- <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-pequena.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-media.png" type="image/png">
+        <img src="imagens/foto-grande.png" alt="Imagens flexível">
+    </picture> -->
+    <picture>
+      <source
+        media="(max-width: 750px)"
+        srcset="imagens/pixel-art-p.png"
+        type="image/png"
+      />
+      <source
+        media="(max-width: 1050px)"
+        srcset="imagens/pixel-art-m.png"
+        type="image/png"
+      />
+      <img src="imagens/pixel-art-g.png" alt="Pixel Art flexível" />
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+
+    <!-- Formados de audio: MP3, WAV, OGG -->
+
+    <!-- Primeira forma de adicionar um audio -->
+    <!-- <audio src="midia/Chlorine.mp3" controls></audio> -->
+
+    <!-- Segunda forma de adicionar o audio -->
+    <audio controls preload="metadata">
+      <source src="midia/Chlorine.mp3" type="audio/mpeg" />
+      <source src="midia/Chlorine.ogg" type="audio/ogg" />
+      <source src="midia/Chlorine.mav" type="audio/mav" />
+      <p>
+        Infelizmente seu navegador não consegue reproduzir áudio.
+        <a href="midia/Chlorine.mp3">Clique aqui para baixar o arquivo MP3!</a>
+      </p>
+    </audio>
+  </body>
+</html>
