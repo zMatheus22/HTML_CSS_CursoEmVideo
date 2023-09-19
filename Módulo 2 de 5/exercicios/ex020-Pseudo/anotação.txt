@@ -1,0 +1,6 @@
+Seletores Personalizados
+    '#'  = id
+    '.'  = class
+    ':'  = pseudo-class
+    '::' = pseudo-element
+    '>'  = clildren
