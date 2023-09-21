@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alinhamento vertical</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      #container {
+        height: 97vh;
+        background-image: url("./img/target001.png");
+        background-size: 100% 100%;
+        padding: 10px;
+
+        /* Para alinhamento vertical precisamos configurar a posição dos dois blocos 
+            o container (primeira div) deve ter posição relativa.
+        */
+        position: relative;
+      }
+      #conteudo {
+        height: 200px;
+        width: 300px;
+        background-image: url("./img/target001.png");
+        background-size: 100% 100%;
+
+        /* Para alinhamento vertical precisamos configurar a posição dos dois blocos 
+            o conteudo (segunda div) deve ter posição absoluta, assim a gente pode 
+            posicionar utilizando o topo e a esquerda, além de também utilizar o transforme
+            para mexer na posição.
+        */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <section id="container">
+      <article id="conteudo"></article>
+    </section>
+  </body>
+</html>
