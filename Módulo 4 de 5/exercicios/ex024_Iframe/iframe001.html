@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estudo de iframe</title>
+    <style>
+      iframe {
+        width: 400px;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Testando o uso de iframe</h1>
+    <p>
+      Acessando o site meu site
+      <!-- Tamanho padrão do iframe 300x150 -->
+      <!-- Para esconder a rolagem do mouse utiliza-se o 'scolling' mas depende do navegador para funcionar -->
+      <iframe src="https:strada.dev.br" frameborder="0" scolling="no">
+        <!-- O que esta aqui dentro vai mostra apenas para os dispositivos que não suportam iframe -->
+        <a href="https:strada.dev.br" target="_blank"
+          ><strong>strada.dev.br</strong></a
+        >
+      </iframe>
+    </p>
+    <p>
+      O repositório do Guanabara
+      <iframe src="https://gustavoguanabara.github.io" frameborder="0">
+        <!-- O que esta aqui dentro vai mostra apenas para os dispositivos que não suportam iframe -->
+        <a href="https://gustavoguanabara.github.io" target="_blank"
+          >repositório</a
+        >
+      </iframe>
+      Também é legal
+    </p>
+  </body>
+</html>
