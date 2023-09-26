@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/* Todas as demais mídias */
+
+/* Typical Device Breakpoints 
+   --------------------------
+    Pequenas telas: até 600px
+    Celular: de 600px até 768px
+    Tablet: 768px até 992px
+    Desktop: 992px até 1200px
+    Grandes telas: acima de 1200px
+*/
+/* Impresora */
+@media print {
+  * {
+    font-family: "Courier New", Courier, monospace;
+  }
+  body {
+    background: black url("../img/back-print.jpg") no-repeat; /*Desnecessário/Não funciona*/
+  }
+
+  main {
+    border: 2px solid black;
+    width: 90vw;
+  }
+
+  main h1 {
+    text-shadow: none;
+    color: black;
+  }
+
+  main::after {
+    content: "Essa impressão foi feita atrável do curso em video";
+  }
+
+  img#print {
+    display: block;
+  }
+}
+
+/* Celular */
+@media screen and (max-width: 768px) {
+  img#phone {
+    display: block;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body {
+    background: black url("../img/back-tablet.jpg") no-repeat;
+    background-size: cover;
+  }
+  img#tablet {
+    display: block;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  body {
+    background: black url("../img/back-pc.jpg") no-repeat;
+    background-size: cover;
+  }
+  img#pc {
+    display: block;
+  }
+}
+
+/* Grandes telas */
+@media screen and (min-width: 1200px) {
+  body {
+    background: black url("../img/back-tv.jpg") no-repeat;
+    background-size: cover;
+  }
+  main {
+    width: 700px;
+  }
+  img#tv {
+    display: block;
+  }
+}
