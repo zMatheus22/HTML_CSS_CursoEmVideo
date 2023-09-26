@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+      <!-- Agrupar os input -->
+      <fieldset>
+        <legend>Dados pessoais</legend>
+        <p>
+          <label for="inome">Nome</label>
+          <input
+            type="text"
+            name="nome"
+            id="inome"
+            minlength="3"
+            maxlength="20"
+            required
+          />
+        </p>
+        <p>
+          <label for="iemail">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="iemail"
+            required
+            autocomplete="email"
+          />
+        </p>
+        <p>
+          <label for="itelefone">Telefone</label>
+          <input
+            type="tel"
+            name="tel"
+            id="itelefone"
+            autocomplete="tel"
+            pattern="^\([0-9]{2}\)[0-9]{5}-[0-9]{4}$"
+            placeholder="(99)12345-6789"
+            required
+          />
+          <!--
+                RegEx:
+                    Começa com '^' e termina com '$'
+                    Para permitir somente números '\d' ou '[0-9]'
+                    Quantidade de caracter '{qdt}' exemplo: {4}
+            -->
+        </p>
+      </fieldset>
+      <p>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+      </p>
+    </form>
+  </body>
+</html>
