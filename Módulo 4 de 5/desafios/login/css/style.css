@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+/* Typical Device Breakpoints 
+   --------------------------
+    Pequenas telas: até 600px
+    Celular: de 600px até 768px
+    Tablet: 768px até 992px
+    Desktop: 992px até 1200px
+    Grandes telas: acima de 1200px
+*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --verde: #49a09d;
+  --lilas: #5f2c82;
+}
+
+body,
+html {
+  background: var(--lilas);
+  height: 100vh;
+  width: 100vw;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+section#login {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  overflow: hidden;
+
+  width: 18em;
+  height: 35em;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+
+  transform: translate(-50%, -50%);
+  transition: width 0.4s, height 0.5s;
+  transition-timing-function: ease;
+}
+
+section#login > div#imagem {
+  display: block;
+  height: 15em;
+  background: var(--lilas) url("../img/metal.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+section#login > div#form {
+  display: block;
+  padding: 10px;
+}
+
+div#form > h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+div#form > p {
+  font-size: 0.8em;
+}
+
+form > div.campo {
+  background-color: var(--lilas);
+  width: 100%;
+  display: block;
+  height: 40px;
+  border: 2px solid var(--lilas);
+  border-radius: 8px;
+  margin: 5px 0px;
+}
+
+div.campo span {
+  color: white;
+  font-size: 2em;
+  width: 40px;
+  padding: 5px;
+}
+
+div.campo input {
+  background-color: #94cfcd;
+  font-size: 1em;
+
+  width: calc(100% - 44.65px);
+  height: 100%;
+
+  border: 0px;
+  border-radius: 8px;
+
+  padding: 4px;
+
+  transform: translateY(-13px);
+}
+
+div.campo input:focus-visible {
+  background-color: white;
+  border: none;
+}
+
+form > input[type="submit"],
+form > input[type="reset"] {
+  display: block;
+
+  font-size: 1em;
+
+  width: 100%;
+  max-width: 400px;
+  height: 40px;
+
+  margin: auto;
+  margin-bottom: 10px;
+
+  background-color: var(--verde);
+  color: white;
+
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form > input[type="reset"] {
+  background-color: white;
+  color: #2d6462;
+  border: 1px solid var(--verde);
+}
+
+form > input[type="submit"]:hover,
+form > input[type="reset"]:hover {
+  background-color: #2d6462;
+  color: white;
+}
